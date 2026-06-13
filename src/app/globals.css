@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: #2d4f4f; /* teal-dark */
+  color: #faf5f0; /* cream */
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ── Ripple ring system (used by Hero) ── */
+.ripple-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 9999px;
+  border: 2px solid rgba(127, 179, 179, 0.30); /* teal-light */
+  will-change: transform, opacity;
+  animation: ripple 6s ease-out infinite;
+}
+
+.ripple-ring--accent {
+  border-color: rgba(232, 168, 124, 0.40); /* apricot */
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* ── Reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .ripple-ring {
+    animation: none;
+    opacity: 0.18;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
