@@ -295,7 +295,7 @@ export default function Team() {
         </div>
 
         {/* Founder cards */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 md:items-start">
           <ExpandableCard
             cardRef={card1Ref}
             photo="/images/vishwas.jpg"
