@@ -4,7 +4,6 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 // String consts to avoid raw JSX text with apostrophes / special chars
 const HEADLINE = "Let's Talk";
@@ -258,8 +257,6 @@ export default function ContactPageClient() {
           </form>
         )}
       </div>
-
-      <Footer className="mt-12" />
     </div>
     </>
   );
